@@ -6,20 +6,10 @@ const Finances: NextPage<{}> = () => {
     return (
         <div>
             <Layout>
-                <div className="title topPadding">Transfers</div>
+                <div className="title">Transfers</div>
                 <TransferList />
             </Layout>
             <style jsx>{`
-                ul {
-                    font-family: Tenor Sans;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 18px;
-                    line-height: 40px;
-                    color: #fffafa;
-                    list-style-type: none;
-                    padding: 0;
-                }
                 .title {
                     font-family: Tenor Sans;
                     font-style: normal;
@@ -28,9 +18,6 @@ const Finances: NextPage<{}> = () => {
                     line-height: 40px;
                     color: ##fffafa;
                     opacity: 0.5;
-                }
-                .topPadding {
-                    padding-top: 50px;
                 }
             `}</style>
         </div>

@@ -1,4 +1,5 @@
 import NavLink from './NavLink'
+import Link from 'next/link'
 
 const Navigation = () => (
     <div>

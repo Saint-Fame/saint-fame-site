@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import styled from 'styled-components'
 
 type NavLinkProps = {
     href: string
@@ -19,5 +20,4 @@ const NavLink = ({ href, children }: NavLinkProps) => {
         <Link href={href}>{React.cloneElement(children, { className })}</Link>
     )
 }
-
 export default NavLink

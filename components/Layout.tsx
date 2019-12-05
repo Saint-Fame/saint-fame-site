@@ -10,12 +10,12 @@ type LayoutProps = {
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
     <div>
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="//fonts.googleapis.com/css?family=Tenor+Sans"
-        />
         <Head>
+            <link
+                rel="stylesheet"
+                type="text/css"
+                href="//fonts.googleapis.com/css?family=Tenor+Sans"
+            />
             <title>SAINT FAME</title>
             <meta
                 name="viewport"
