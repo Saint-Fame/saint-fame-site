@@ -4,6 +4,7 @@ import React from 'react'
 import Loader from '../components/Loader'
 
 const Index: React.FunctionComponent = () => {
-    return <Layout>Home</Layout>
+
+return <Layout>Home</Layout>
 }
 export default Index
