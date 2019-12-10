@@ -21,5 +21,5 @@ export const walletconnect = new WalletConnectConnector({
 
 export const walletlink = new WalletLinkConnector({
     url: RPC_URLS[1],
-    appName: 'Saint Fame DAO'
+    appName: 'Saint Fame'
 })
