@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { ethers } from 'ethers'
-import { ETHERSCAN_API_KEY, TOKEN_HOLDER_ADDRESS } from '../utils/helper'
+import { ETHERSCAN_API_KEY, HOLDER_ADDRESS } from '../../utils'
 
 const TotalSupply = () => {
     /** 

@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
-import { FINANCES_ADDRESS, ETHERSCAN_API_KEY, truncate } from '../utils/helper'
+import { truncate } from '../utils/helper'
 import { ethers } from 'ethers'
 import Loader from '../Loader'
 import axios from 'axios'
+import { FINANCES_ADDRESS, ETHERSCAN_API_KEY } from '../../utils'
 
 let FINANCES_ENDPOINT = `https://api.etherscan.io/api?module=account&action=tokentx&address=${FINANCES_ADDRESS}&startblock=8972891&endblock=latest&sort=asc&apikey=${ETHERSCAN_API_KEY}`
 
-const provider = new ethers.providers.EtherscanProvider('mainnet', ETHERSCAN_API_KEY)
+const provider = new ethers.providers.EtherscanProvider(
+    'mainnet',
+    ETHERSCAN_API_KEY
+)
 
 interface Transfer {
     time: string
