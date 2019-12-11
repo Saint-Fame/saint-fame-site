@@ -1,11 +1,12 @@
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
+import { MAINNET_PROVIDER, RINKEBY_PROVIDER } from '../utils'
 
 const POLLING_INTERVAL = 8000
 export const RPC_URLS: { [chainId: number]: string } = {
-    1: process.env.MAINNET_PROVIDER as string,
-    4: process.env.RINKEBY_PROVIDER as string
+    1: MAINNET_PROVIDER,
+    4: RINKEBY_PROVIDER
 }
 
 export const injected = new InjectedConnector({
@@ -20,6 +21,6 @@ export const walletconnect = new WalletConnectConnector({
 })
 
 export const walletlink = new WalletLinkConnector({
-    url: RPC_URLS[1],
+    url: MAINNET_PROVIDER,
     appName: 'Saint Fame'
 })

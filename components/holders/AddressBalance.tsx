@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { ethers } from 'ethers'
-import { ETHERSCAN_API_KEY, TOKEN_HOLDER_ADDRESS } from '../utils/helper'
+import { ETHERSCAN_API_KEY, HOLDER_ADDRESS } from '../../utils'
 
 const AddressBalance = (props: any) => {
     let address: string = props.address
 
-    let BALANCE_ENDPOINT = `https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${TOKEN_HOLDER_ADDRESS}&address=${address}&tag=latest&apikey=${ETHERSCAN_API_KEY}`
+    let BALANCE_ENDPOINT = `https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=${HOLDER_ADDRESS}&address=${address}&tag=latest&apikey=${ETHERSCAN_API_KEY}`
 
     console.log(BALANCE_ENDPOINT)
     const [balance, setBalance] = useState('...')

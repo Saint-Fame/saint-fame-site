@@ -19,6 +19,7 @@ import { injected, walletconnect, walletlink } from '../../shop/connectors'
 import { useEagerConnect, useInactiveListener } from '../../shop/hooks'
 import { useState, useEffect } from 'react'
 import { Spinner } from '../Spinner'
+import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 
 const connectorsByName: { [name: string]: AbstractConnectorInterface } = {
     'Browser Wallet': injected,
