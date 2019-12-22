@@ -3,10 +3,32 @@ import Navigation from './Navigation'
 import Head from 'next/head'
 // @ts-ignore
 import RetinaImage from 'react-retina-image'
+import styled from "styled-components";
 
 type LayoutProps = {
     title?: string
 }
+
+const Site = styled.div`
+  display: flex;
+  min-height: 100vh;
+  padding-top: 50px;
+  width: 80%;
+`;
+
+const SiteContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ContentHeader = styled.div`
+  height: 40px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
     <div>
@@ -22,81 +44,23 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
                 content="initial-scale=1.0, width=device-width"
             />
         </Head>
-        <span className="content-header flex-center">
+        <ContentHeader>
             <RetinaImage
                 src={require('../public/assets/logo/logo.png')}
                 style={{ marginTop: 24 }}
             />
-        </span>
-        <span className="site">
-            <span className="site-nav">
-                <Navigation />
-            </span>
-            <span className="site-content">
-                <span className="site-topic">{children}</span>
-            </span>
-        </span>
+        </ContentHeader>
+        <Site>
+            <Navigation />
+            <SiteContent>
+                {children}
+            </SiteContent>
+        </Site>
         <style global jsx>{`
             body {
                 background: black;
                 color: #fff;
                 font-family: Tenor Sans;
-            }
-            a {
-                font-family: Tenor Sans;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 40px;
-                color: #fffafa;
-            }
-            a:link {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            a:visited {
-                text-decoration: none;
-            }
-            a:active {
-                text-decoration: underline;
-            }
-            h1 {
-                color: #fff;
-            }
-
-            // # PAGE STRUCTURE
-            .site {
-                display: flex;
-                min-height: 100vh;
-                padding-top: 50px;
-                width: 80%;
-            }
-
-            .site-nav {
-                width: 300px;
-                margin-right: 100px;
-            }
-
-            .site-content {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-            }
-            .content-header {
-                height: 40px;
-                margin-top: 60px;
-            }
-
-            .content-topic {
-                flex-grow: 1;
-            }
-
-            .flex-center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }
         `}</style>
     </div>
