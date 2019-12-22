@@ -6,10 +6,15 @@ const NavigationContainer = styled.div`
   display: flex;
   flex: 1;
   margin-left: 100px;
+  margin-right: 100px;
+  width: 300px;
   flex-direction: column;
   
-  width: 300px;
-  margin-right: 100px;
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+      flex-direction: column;
+      margin: 0 0 20px 0;
+  }
+  
 `
 
 const Navigation = () => (

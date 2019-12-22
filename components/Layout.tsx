@@ -14,6 +14,12 @@ const Site = styled.div`
   min-height: 100vh;
   padding-top: 50px;
   width: 80%;
+  flex-direction: row;
+  
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    flex-direction: column;
+    padding: 50px 20px 0px 20px;
+  }
 `;
 
 const SiteContent = styled.div`

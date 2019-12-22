@@ -35,6 +35,10 @@ const NavLinkAnchor = styled.a<{selected: boolean}>`
             position: absolute;
             left: 79px;
             margin-top: 13px;
+            
+            @media screen and (max-device-width: 480px) and (orientation: portrait) {
+                left: 7px;
+            }
         }
     ` : ''}
 `
